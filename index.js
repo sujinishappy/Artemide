@@ -111,10 +111,10 @@ const first = document.querySelectorAll(".first");
 const sections = document.querySelectorAll("section");
 
 const firstTop = sections[0].offsetTop;
-const secondTop = sections[2].offsetTop;
-const thirdTop = sections[3].offsetTop;
-const fourthTop = sections[4].offsetTop;
-const fiveTop = sections[5].offsetTop;
+const secondTop = sections[1].offsetTop;
+const thirdTop = sections[2].offsetTop;
+const fourthTop = sections[3].offsetTop;
+const fiveTop = sections[4].offsetTop;
 
 
 first[0].onclick = function(event) {
