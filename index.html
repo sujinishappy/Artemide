@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+        <title>ARTEMIDE</title>
+        <link rel="icon" type="image/x-icon" href="./img/logo.png">
+        <link href="./index.css" rel="stylesheet" type="text/css">
+        <link href="./common_css.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <header id="header">
+            <span class="nav">
+                <ul>
+                    <li class="first"><a href="#MAIN">MAIN</a></li>
+                    <li class="first"><a href="#ABOUT">ABOUT</a></li>
+                    <li class="first"><a href="#HISTORY">HISTORY</a></li>
+                    <li class="first"><a href="#DESIGNERS">DESIGNERS</a></li>
+                    <li class="first"><a href="#LIGHTS">LIGHTS</a></li>
+                </ul>
+            </span>
+        </header>
+        <!-- <div class="loader">
+            <div class="loading">
+                <h2> loading …</h2>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="hap"></span>
+            </div>
+        </div> -->
+        <div class="pointer"></div>
+        <!--<button id="topButton" onclick="scrollToTop()">↑</button>-->
+        <div id="wrap">
+            <section id="MAIN">
+                <img src="./img/main.png">
+                <section id="card_ro">
+                    <h1 id="card_ro2"></h1>
+                    <div id="cards" class="sticky2">
+                        <div class="container3">
+                            <ul class="list">
+                                <li class="list-item">
+                                    <p class="modalP1"></p><a class="modal_open_btn" href="#openModal"><img src="./img/card1.png"></a></li>
+                                <li class="list-item">
+                                    <p class="modalP1"></p><a class="modal_open_btn" href="#openModal"><img src="./img/card2.png"></a></li>
+                                <li class="list-item">
+                                    <p class="modalP1"></p><a class="modal_open_btn" href="#openModal"><img src="./img/card3.png"></a></li>
+                                <li class="list-item">
+                                    <p></p><a class="modal_open_btn" href="#openModal"><img src="./img/card4.png"></a></li>
+                                <li class="list-item">
+                                    <p></p><a class="modal_open_btn" href="#openModal"><img src="./img/card5.png"></a></li>
+                                <li class="list-item">
+                                    <p></p><a class="modal_open_btn" href="#openModal"><img src="./img/card6.png"></a></li>
+                                <li class="list-item">
+                                    <p></p><a class="modal_open_btn" href="#openModal"><img src="./img/card7.png"></a></li>
+                                <li class="list-item">
+                                    <p></p><a class="modal_open_btn" href="#openModal"><img src="./img/card8.png"></a></li>
+                            </ul>
+                            <div class="circle"></div>
+                            <button id="moveButton">Click to next</button>
+                            <!-- <div id="openModal" class="modal">
+                                <div id="openModal2" class="modal-content">
+                                    <button id="closeModal">
+                                        x
+                                    </button>
+                                    <p id="modalP">모달 내용의 초기 텍스트</p>
+                                    <p id="modalP2">모달 내용의 초기 텍스트</p>
+                                    <img src="" alt="Modal Image" id="modalImage">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+                <div class="gallery">
+                    <div class="name-list">
+                        <button data-index="0">Tolomeo</button>
+                        <button data-index="1">Alfa</button>
+                        <button data-index="2">Pirce</button>
+                        <button data-index="3">Tizio</button>
+                        <button data-index="4">Nesso</button>
+                        <button data-index="5">Eclisse</button>
+                        </div>
+                    <div class="image-container">
+                    <img src="./img/gallery1.png" alt="Image 1" class="image">
+                    <img src="./img/gallery2.png" alt="Image 2" class="image">
+                    <img src="./img/gallery3.png" alt="Image 3" class="image">
+                    <img src="./img/gallery4.png" alt="Image 4" class="image">
+                    <img src="./img/gallery5.png" alt="Image 5" class="image">
+                    <img src="./img/gallery6.png" alt="Image 6" class="image active">
+                    </div>
+                </div>
+            </section>
+            <section id="ABOUT">
+                <img src="./img/about.png">
+                
+            </section>
+            <div class="moveLight">
+                <div class="background">
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+                <img src="./img/movelight.png" alt="Movable Image" class="draggable-image">
+              </div>
+            <section id="HISTORY">
+                <img src="./img/history.png">
+                <div id="fix-history">
+                    <div class="bunble">
+                        <!-- <h1>19</h1> -->
+                        <svg class="scrollcircle" width="400" height="400" viewBox="0 0 400 400">
+                            <circle cx="200" cy="200" r="190" stroke="#DFDFDB" stroke-width="2" fill="none"></circle>
+                        </svg>
+                        <svg class="scrollcircle2" width="340" height="340" viewBox="0 0 340 340">
+                            <circle cx="170" cy="170" r="160" stroke="#DFDFDB" stroke-width="none" fill="#DFDFDB"></circle>
+                        </svg>
+                    </div>
+                    <img src="./img/historys.png">
+                </div>
+                <div id="space">
+                    <!-- <div class="scsr"></div> -->
+                    <div class="image-slider">
+                        <div class="spaceimg"><img src="./img/space1.png"></div>
+                        <div class="spaceimg"><img src="./img/space2.png"></div>
+                        <div class="spaceimg"><img src="./img/space3.png"></div>
+                        <div class="spaceimg"><img src="./img/space4.png"></div>
+                        <div class="spaceimg last"><img src="./img/space5.png"></div>
+                      </div>
+                </div>
+                <!-- <img src="./img/space.png"> -->
+                <div class="blind">
+                    <div class="container">
+                        <div class="rectangle" onclick="toggleColor(this)">
+                            <span>Aphrodite</span>
+                        </div>
+                        <div class="rectangle" onclick="toggleColor(this)">
+                            <span class="rg">Art</span>
+                        </div>
+                        <div class="rectangle" onclick="toggleColor(this)">
+                            <span>Artemide</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <section id="DESIGNERS">
+                <img src="./img/designer.png">
+                <img src="./img/designers.png">
+            </section>
+            <section id="LIGHTS">
+                <img src="./img/LIGHTS.png">
+                <div id="sliders">
+                    <figure>
+                    <img src="./img/slide1.png" alt>
+                    <img src="./img/slide2.png" alt>
+                    <img src="./img/slide3.png" alt>
+                    <img src="./img/slide4.png" alt>
+                    <img src="./img/slide5.png" alt>
+                    <!-- <img src="./img/slide6.png" alt> -->
+                    </figure>
+                </div>
+                <div class="lastslide">
+                    <div class="slider-wrapper">
+                        <div class="slide"><img src="./img/slider1.png" alt="Image 1"></div>
+                        <div class="slide"><img src="./img/slider2.png" alt="Image 2"></div>
+                        <div class="slide"><img src="./img/slider3.png" alt="Image 3"></div>
+                        <div class="slide"><img src="./img/slider4.png" alt="Image 4"></div>
+                        <div class="slide"><img src="./img/slider5.png" alt="Image 5"></div>
+                        <div class="slide"><img src="./img/slider6.png" alt="Image 6"></div>
+                    </div>
+                    <div class="controls">
+                        <button class="button" id="prev">&#10094;</button>
+                        <button class="button" id="next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="slide-buttons">
+                    <button class="slide-button" data-index="0">1</button>
+                    <button class="slide-button" data-index="1">2</button>
+                    <button class="slide-button" data-index="2">3</button>
+                    <button class="slide-button" data-index="3">4</button>
+                    <button class="slide-button" data-index="4">5</button>
+                    <button class="slide-button" data-index="5">6</button>
+                </div>
+            </section>
+        </div>
+    
+    <footer id="footer">
+        <div class="copy">COPYRIGHT 2023 — Nam su jin</div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>

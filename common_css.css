@@ -1,0 +1,519 @@
+@font-face {
+    font-family: 'PPHatton-Bold';
+    src: url("./img/PPHatton-Bold.otf");
+}
+@font-face {
+    font-family: 'PPHatton-BoldItalic';
+    src: url("./img/PPHatton-BoldItalic.otf");
+}
+@font-face {
+    font-family: 'PPHatton-Medium';
+    src: url("./img/PPHatton-Medium.otf");
+}
+@font-face {
+    font-family: 'PPHatton-MediumItalic';
+    src: url("./img/PPHatton-MediumItalic.otf");
+}
+@font-face {
+    font-family: 'PPHatton-Ultralight';
+    src: url("./img/PPHatton-Ultralight.otf");
+}
+@font-face {
+    font-family: 'PPHatton-UltralightItalic';
+    src: url("./img/PPHatton-UltralightItalic.otf");
+}
+@font-face {
+    font-family: 'BasisGrotesquePro_BoldItalic';
+    src: url("./img/BasisGrotesquePro-BoldItalic.ttf");
+}
+@font-face {
+    font-family: 'BasisGrotesquePro_Italic';
+    src: url("./img/BasisGrotesquePro-Italic.ttf");
+}
+@font-face {
+    font-family: 'BasisGrotesquePro_Light';
+    src: url("./img/BasisGrotesquePro-Light.ttf");
+}
+@font-face {
+    font-family: 'BasisGrotesquePro_LightItalic';
+    src: url("./img/BasisGrotesquePro-LightItalic.ttf");
+}
+@font-face {
+    font-family: 'BasisGrotesquePro_Medium';
+    src: url("./img/BasisGrotesquePro-Medium.ttf");
+}
+@font-face {
+    font-family: 'BasisGrotesquePro_MediumItalic';
+    src: url("./img/BasisGrotesquePro-MediumItalic.ttf");
+}
+@font-face {
+    font-family: 'BasisGrotesquePro_Regular';
+    src: url("./img/BasisGrotesquePro-Regular.ttf");
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    /* cursor: none; */
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    height: auto;
+    background-color: #DFDFDB;
+    font-family: 'BasisGrotesquePro_Medium';
+    /* cursor: none; */
+
+}
+/* 수직 스크롤 바 스타일 */
+::-webkit-scrollbar {
+    width: .65vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #373aee; /* 스크롤 바 색상 */
+    border-radius: 4px; /* 둥근 테두리 */
+    cursor:pointer;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff; /* 스크롤 바 트랙 색상 */
+    opacity: 0%;
+}
+
+/* 수평 스크롤 바 스타일 */
+::-webkit-scrollbar-horizontal {
+    height: 12px; /* 수평 스크롤 바 높이 */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #293A68; /* 수평 스크롤 바 색상 */
+}
+/* .img{
+    width: auto;
+    height: auto;
+} */
+/* .grid-container {
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(8, 1fr); 
+    gap: 1.6vw; 
+    width: calc(100vw - .65vw); 
+    height: 4000vh;
+    padding: 0 6.7708vw;
+}
+
+.grid {
+    background-color: #ff000030; 
+    padding: 1.0417vw; 
+    text-align: center;
+} */
+
+/* 네비게이션 바 */
+header{
+    height: 4.2vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 1s ease;
+    background-color: #fffeee8e;
+    backdrop-filter: blur(20px);     
+    z-index: 20;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+header.down {
+    top: -10vh;
+}
+header.up {
+    top: 0;
+    transition: all 1s ease;
+}
+header ul {
+    list-style: none;
+    display: flex;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vw;
+}
+header:hover{
+    background: rgba(255, 255, 255, 0.034);
+    /* backdrop-filter: blur(6px); Apply blur effect */
+}
+.nav .first{
+    margin: 0 2.8vw;
+}
+.nav a {
+    color: #19181B;
+    font-size: calc(100vw * 22 / 1920);
+    text-decoration: none;
+    position: relative;
+}
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: .1vw;
+    background-color: #19181B;
+    left: 0;
+    bottom: -.1vw;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+@keyframes over{
+    0%{
+        margin-top: 0px;    
+        opacity: 1;
+    }
+    30%{
+        margin-top: -5vw;    
+        opacity: .5;
+    }
+    100%{
+        margin-top: -5vw;  
+        opacity: 0; 
+    }
+}
+.nav-up {
+    opacity: 0;
+    margin-top: -3vw;
+}
+.nav-down{
+    animation: over 6s ease reverse;
+}
+
+/* .nav_under .nav_line{
+    width: 100%;
+    height: .1vw;
+    background-color: #19181B;
+} */
+.pointer {
+    position: fixed;
+    width: 1vw;
+    height: 1vw;
+    background-color: #373aee;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(.07, .82, .17, 1), border 0.3s cubic-bezier(.07, .82, .17, 1), background-color 0.3s cubic-bezier(.07, .82, .17, 1);
+    z-index: 99;
+    cursor: none;
+}
+#topButton {
+    position: fixed;
+    bottom: 2vh;
+    right: 2vh;
+    background-color: #EEA737;
+    font-family: sans-serif;
+    font-size: calc(100vw * 40/ 1920);
+    color: #ffffffd2;
+    border: none;
+    border-radius: 50%;
+    padding: .8vw;
+    height: 4vw;
+    width: 4vw;
+    z-index: 20;
+    cursor: none;
+}
+::selection {
+    background-color:  #373aeeb6; 
+    color: #fff; /* 선택된 텍스트의 색상 */
+}
+
+
+/* 선택을 해제한 후의 텍스트 스타일 지정 */
+::-moz-selection {
+    background-color: #b1536785; /* Firefox에서의 선택 영역의 배경 색 */
+    color: #F2F2F2; /* 선택된 텍스트의 색상 */
+}
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F2F2F2;
+    z-index: 9999;
+    opacity: 1;
+    transition: 0.5s ease;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+}
+
+.hidden2 {
+    display: none;
+}
+.no-scroll {
+    overflow: hidden;
+}
+.loading {
+    text-align: center;
+}
+.loading h2 {
+    color: black;
+    font-size: calc(100vw * 32/ 1920);
+}
+.loading span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    margin: 0.5em;
+    background: #3d3634bd;
+    border-radius: 50%;
+    animation: loading 1s infinite alternate;
+}
+.loading span:nth-of-type(2) {
+    background: #3d3634bd;
+    animation-delay: 0.2s;
+}
+.loading span:nth-of-type(3) {
+    background: #3d3634bd;
+    animation-delay: 0.4s;
+}
+.loading span:nth-of-type(4) {
+    background: #3d3634bd;
+    animation-delay: 0.6s;
+}
+@keyframes loadings{
+    0%{
+        background: #3d3634bd;
+    scale: 1;
+    }
+    20%{
+        background: #3d3634bd;
+        scale: 1;
+    }
+    100%{
+        background: #49403e;
+        scale: 200;
+    }
+}
+.loading span:nth-of-type(5) {
+    background: #3d3634bd;
+    animation-delay: 0.8s;
+}
+.loading span:nth-of-type(6) {
+    background: #3d3634bd;
+    animation-delay: 1.0s;
+}
+.loading span:nth-of-type(7) {
+    background: #3d3634bd;
+    animation-delay: 1.2s;
+    animation: loadings 1s ease forwards;
+}
+
+/*
+   * Animation keyframes
+   * Use transition opacity instead of keyframes?
+   */
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+footer{
+    width: 100%;
+    height: 14vw;
+    background-color: #221f1ed5;
+    /* margin-top: 10vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer div{
+    width: 86vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #f2f2f259;
+}
+footer p{
+    font-family: 'HelveticaNeueLTPro2';
+    font-size: calc(100vw * 18 / 1920);
+}
+footer p:nth-child(1){
+margin-right: 20vw;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F2F2F2;
+    z-index: 999;
+    opacity: 1;
+    transition: 0.5s ease;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loading2 5.5s ease forwards;
+}
+.loading h2{
+    font-family: 'BasisGrotesquePro_Bold';
+    animation: loading 5s ease forwards;
+    color: #3d3634bd;    
+
+}
+.hidden2 {
+    display: none;
+}
+.no-scroll {
+    overflow: hidden;
+}
+.loading {
+    text-align: center;
+}
+.loading span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    margin: 0.5em;
+    background: #3d3634bd;
+    border-radius: 50%;
+    animation: loading 5s ease forwards;
+}
+.loading span:nth-of-type(2) {
+    background: #3d3634bd;
+    animation-delay: 0.2s;
+}
+.loading span:nth-of-type(3) {
+    background: #3d3634bd;
+    animation-delay: 0.4s;
+}
+.loading span:nth-of-type(4) {
+    background: #3d3634bd;
+    animation-delay: 0.6s;
+}
+@keyframes loadings{
+    0%{
+        background: #3d3634bd;
+    scale: 1;
+    }
+    60%{
+        background: #3d3634bd;
+        scale: 1;
+    }
+    80%{
+        background: #49403e;
+        scale: 200;
+        opacity: 1;
+    }
+    90%{
+        background: #49403e;
+        scale: 200;
+        opacity: 1;
+    }
+    100%{
+        background: #3d3634bd;
+        scale: 000;
+        opacity: 0;
+    }
+}
+.loading span:nth-of-type(5) {
+    background: #3d3634bd;
+    animation-delay: 0.8s;
+}
+.loading span:nth-of-type(6) {
+    background: #3d3634bd;
+    animation-delay: 1.0s;
+}
+.loading span:nth-of-type(7) {
+    background: #3d3634bd;
+    animation-delay: 1.2s;
+    animation: loadings 5.5s ease forwards;
+}
+
+/*
+   * Animation keyframes
+   * Use transition opacity instead of keyframes?
+   */
+@keyframes loading {
+    00% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes loading2 {
+    00% {
+        opacity: 1;
+    }
+    92% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

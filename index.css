@@ -1,0 +1,458 @@
+#wrap{
+    width: calc(100vw - .65vw); 
+    height: auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+#card_ro #card_ro2 {
+    color: white;
+    text-align: center;
+    font-size: calc(100vw * 80/ 1920);
+    margin-top: 20vw;
+}
+.transforms {
+    animation: transforms 1.5s ease forwards;
+}
+@keyframes transforms {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    60% {
+        opacity: 0;
+        transform: scaleX(1);
+    }
+    65% {
+        opacity: 0.5;
+        transform: scaleX(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(106);
+    }
+}
+#card_ro {
+    width: 100vw;
+    height: 270vh;
+    /* background: linear-gradient(to bottom, rgb(0, 0, 0,0.7), rgb(0, 0, 0,0.7), rgb(0, 0, 0,0.7), rgb(0, 0, 0,0.7), rgb(0, 0, 0,0.5), rgb(0, 0, 0,0.3), rgba(255, 255, 255, 0)); */
+}
+#cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    height: 300vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.container3 {
+    width: 100vw;
+    height: 200vh;
+    margin-top: -60vw;
+}
+
+#cards ul {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin-top: 2vw;
+    padding: 0;
+    list-style: none;
+}
+
+#cards li {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 10vw;
+    color: rgba(255, 255, 255);
+    font-size: calc(100vw * 24/ 1920);
+    margin: auto;
+    padding: 0;
+    width: 18vw;
+    height: 24vw;
+    border-radius: 2%;
+    z-index: 10;
+}
+@keyframes spark{
+    0%{
+        opacity: 1;
+
+    }
+    80%{
+        opacity: 1;
+
+    }100%{
+        opacity: 0.3;
+
+    }
+}
+li img {
+    border-radius: 2%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+li p {
+    text-align: center;
+    margin-bottom: 1vw;
+    opacity: 1;
+    animation: spark 1.5s ease infinite alternate-reverse;
+}
+.container3 .circle {
+    position: absolute;
+    top: 90vw;
+    left: 4vw;
+    width: 92vw;
+    height: 80vw;
+    border-radius: 50%;
+    border: 2px solid #4F4F4F;
+    animation: spark 1.5s ease infinite alternate-reverse;
+}
+/**/
+#moveButton{
+    position: absolute;
+    width: 10vw;
+    height: 3.6vw;
+    background: none;
+    color: #4F4F4F;
+    text-align: center;
+    border: 2px solid #4F4F4F;
+    margin-top: 14vw;
+    margin-left: 45vw;
+    border-radius: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 1s ease
+;}
+#moveButton:hover{
+    background: #FF6F0D;
+    transition: all 1s ease;
+    color: #FFFEEE;
+    border: none;
+}
+.gallery {
+    position: relative;
+    display: flex;
+    width: 88vw;
+    margin: auto;
+    height: auto;
+    margin-bottom: 10vw;
+}
+
+.image-container {
+    margin-left: 40vw;
+    width: 60vw;
+    display: flex;
+    position: relative;
+}
+
+.image {
+    width: 28.3vw;
+    margin-left: -22vw;
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 70%;
+    z-index: 0;
+}
+
+.image.active {
+    transform: translateX(-1vw);
+    opacity: 1;
+    z-index: 1;
+}
+
+.name-list {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: start;
+}
+
+.name-list button {
+    padding: 1.6vw 0;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #FFFEEE;
+    background: none;
+    font-size: calc(100vw * 50 / 1920);
+    font-family: 'PPHatton-Medium';
+    transition: all 1s ease;
+}
+
+.name-list button:hover {
+    color: #FF6F0D;
+    transition: all 1s ease;
+}
+.name-list button.active {
+    color: #1F1D1D;
+}
+
+#ABOUT{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30vw 0;
+}
+.moveLight {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left, .right {
+    flex: 1;
+    transition: flex-basis 0.2s ease; /* 부드러운 전환 */
+}
+
+.left {
+    background: #FFFEEE; /* 흑백 배경 왼쪽 */
+}
+
+.right {
+    background: #19181B; /* 흑백 배경 오른쪽 */
+}
+
+.draggable-image {
+    position: absolute;
+    width: auto; /* 이미지 크기 */
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+    z-index: 10;
+}
+
+#HISTORY{
+    height: auto;
+    width: auto;
+    margin-top: 30vw;
+}
+#fix-history{
+    width: auto;
+    height: 570vh;
+    background-color: #DFDFDB;
+}
+
+.bunble {
+    display: flex;
+    flex-direction:row; /* 요소를 세로 방향으로 정렬 */
+    align-items: end; /* 중앙 정렬 (필요에 따라 변경 가능) */
+    position: sticky;
+    top: 22vw;
+    margin-bottom: 9vw;
+    padding-left: 6.4vw;
+    padding-bottom: 1vw;
+}
+#fix-history h1{
+    /* position: sticky; */
+    /* margin-left: 6.6vw;
+    margin-bottom: 4vw; */
+    font-family: 'PPHatton-Bold';
+    font-size: calc(100vw * 100 / 1920);
+    color: #DFDFDB;
+}
+.scrollcircle {
+    /* position: sticky; */
+    margin-left: 66vw;
+    width: 400px;
+    height: 400px;
+    /* margin-bottom: 10vw; */
+}
+.scrollcircle2{
+    position: absolute;
+    margin-left: 67.5vw;
+    margin-bottom: 1.5vw;
+}
+.scrollcircle circle {
+    stroke-dasharray: 1194; /* Perimeter of the circle: 2 * π * r */
+    stroke-dashoffset: 1194; /* Initially hide the stroke */
+    transition: stroke-dashoffset 0.2s ease;
+}
+#space{
+    height: auto;
+}
+/* .scsr{
+    position: sticky;
+    width: 100px;
+    height: 100px;
+    background-color: #FF6F0D;
+    top: 20vw;
+    left: 20vw;
+    z-index: 10;
+} */
+.spaceimg{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 200vh;
+}
+.spaceimg.last{
+    height: 114vh;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.rectangle {
+    flex: 1; /* 각 직사각형이 동일한 비율로 공간을 차지하도록 설정 */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: calc(100vw * 200 / 1920);
+    font-family: 'PPHatton-Medium';
+    color: #FFFEEE;
+    background-color: #DFDFDB; /* 기본 배경색 */
+    border-bottom: 4px solid; /* 아래쪽 보더 초기화 */
+    transition: background-color 0.3s ease; /* 배경색 변화에 애니메이션 추가 */
+    cursor: pointer; /* 클릭 가능하다는 것을 나타내기 위해 커서 변경 */
+}
+.rectangle span{
+margin-left: 8vw;
+}
+.rectangle span.rg{
+    margin-left: 77vw;
+}
+
+.rectangle:hover {
+    background-color: #FFFEEE; /* 마우스 오버 시 배경색 변경 */
+}
+#DESIGNERS{
+    height: auto;
+    width: auto;
+    padding-top: 20vw;
+}
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    div#sliders { overflow: hidden; }
+    div#sliders figure img { width: 20%; float: left; }
+    div#sliders figure { 
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite; 
+    }
+/**/
+#LIGHTS{
+    height: auto;
+    width: 100vw;
+    background-color: #FFFEEE;
+}
+.lastslide {
+    position: relative;
+    width: 100%;
+    max-width: auto;
+    margin: 0 0;
+    overflow: hidden;
+    height: 49vw;
+    margin-top: 8vw;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.button {
+    background-color: #fffeee00;
+    border: none;
+    color: rgba(255, 255, 255, 0);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 30vw;
+}
+
+.slide-buttons button {
+    background-color: #ddd;
+    border: none;
+    color: #333;
+    padding: 6px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 0px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+}
+
+.slide-buttons button.active {
+    background-color: #333;
+    color: white;
+}
+
+.slide-buttons button:hover {
+    background-color: #FF6F0D;
+    transition: all 1s ease;
+}
+    
